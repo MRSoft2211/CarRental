@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA89265F-7F46-4949-ADEC-A672AFE00DBD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CarRental</RootNamespace>
+    <AssemblyName>CarRental</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_car.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\Bnfu_1.5.3\Bnfu_1.5.3_crack\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnaMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaMenuForm.Designer.cs">
+      <DependentUpon>AnaMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AracEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AracEkleForm.Designer.cs">
+      <DependentUpon>AracEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AracGuncelleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AracGuncelleForm.Designer.cs">
+      <DependentUpon>AracGuncelleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AracKiralaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AracKiralaForm.Designer.cs">
+      <DependentUpon>AracKiralaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AracKiraSozlesmeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AracKiraSozlesmeForm.Designer.cs">
+      <DependentUpon>AracKiraSozlesmeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AracListeleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AracListeleForm.Designer.cs">
+      <DependentUpon>AracListeleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AracSilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AracSilForm.Designer.cs">
+      <DependentUpon>AracSilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AracTanimForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AracTanimForm.Designer.cs">
+      <DependentUpon>AracTanimForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AracTeslimAlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AracTeslimAlForm.Designer.cs">
+      <DependentUpon>AracTeslimAlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GirisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirisForm.Designer.cs">
+      <DependentUpon>GirisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KiraBitirForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KiraBitirForm.Designer.cs">
+      <DependentUpon>KiraBitirForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KiradaSozlesmelerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KiradaSozlesmelerForm.Designer.cs">
+      <DependentUpon>KiradaSozlesmelerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriEkleForm.Designer.cs">
+      <DependentUpon>MusteriEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriGuncelleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriGuncelleForm.Designer.cs">
+      <DependentUpon>MusteriGuncelleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriListeleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriListeleForm.Designer.cs">
+      <DependentUpon>MusteriListeleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriSilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriSilForm.Designer.cs">
+      <DependentUpon>MusteriSilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OdemeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdemeForm.Designer.cs">
+      <DependentUpon>OdemeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelKayitEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelKayitEkleForm.Designer.cs">
+      <DependentUpon>PersonelKayitEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelKayitGuncelleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelKayitGuncelleForm.Designer.cs">
+      <DependentUpon>PersonelKayitGuncelleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelKayitListeleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelKayitListeleForm.Designer.cs">
+      <DependentUpon>PersonelKayitListeleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelKayitSilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelKayitSilForm.Designer.cs">
+      <DependentUpon>PersonelKayitSilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SplashScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreenForm.Designer.cs">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TamamlananSozlesmeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TamamlananSozlesmeForm.Designer.cs">
+      <DependentUpon>TamamlananSozlesmeForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AnaMenuForm.resx">
+      <DependentUpon>AnaMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AracEkleForm.resx">
+      <DependentUpon>AracEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AracGuncelleForm.resx">
+      <DependentUpon>AracGuncelleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AracKiralaForm.resx">
+      <DependentUpon>AracKiralaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AracKiraSozlesmeForm.resx">
+      <DependentUpon>AracKiraSozlesmeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AracListeleForm.resx">
+      <DependentUpon>AracListeleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AracSilForm.resx">
+      <DependentUpon>AracSilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AracTanimForm.resx">
+      <DependentUpon>AracTanimForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AracTeslimAlForm.resx">
+      <DependentUpon>AracTeslimAlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GirisForm.resx">
+      <DependentUpon>GirisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiraBitirForm.resx">
+      <DependentUpon>KiraBitirForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiradaSozlesmelerForm.resx">
+      <DependentUpon>KiradaSozlesmelerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriEkleForm.resx">
+      <DependentUpon>MusteriEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriGuncelleForm.resx">
+      <DependentUpon>MusteriGuncelleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriListeleForm.resx">
+      <DependentUpon>MusteriListeleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriSilForm.resx">
+      <DependentUpon>MusteriSilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdemeForm.resx">
+      <DependentUpon>OdemeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelKayitEkleForm.resx">
+      <DependentUpon>PersonelKayitEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelKayitGuncelleForm.resx">
+      <DependentUpon>PersonelKayitGuncelleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelKayitListeleForm.resx">
+      <DependentUpon>PersonelKayitListeleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelKayitSilForm.resx">
+      <DependentUpon>PersonelKayitSilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SplashScreenForm.resx">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TamamlananSozlesmeForm.resx">
+      <DependentUpon>TamamlananSozlesmeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_pane_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_lady_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insan-kaynaklari-gorselli-liste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perakende-genel-bakis-ikonlu-kutular-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_lady_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oval.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oval copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unknown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unknown1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insan-kaynaklari-gorselli-liste1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-computer-icons-user-update-button-miscellaneous-logo-internet-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aracsil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perssil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perssilxx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kullanıcı_Giris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\female_icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kayıt_icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_google_docs_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_goodnotes_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arabaVraLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\araba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arabalogomini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\araba1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8_car.ico" />
+    <None Include="Resources\icons8_download_graph_report.ico" />
+    <None Include="Resources\icons8_graph_report_script.ico" />
+    <None Include="Resources\anamenu.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\menü.ico" />
+    <None Include="Resources\personel.ico" />
+    <None Include="Resources\araçYönetim.ico" />
+    <None Include="Resources\müşteri2.ico" />
+    <None Include="Resources\kiralama.ico" />
+    <None Include="Resources\sözleşmeler.ico" />
+    <None Include="Resources\icons8_money.ico" />
+    <None Include="Resources\icons8_money_1.ico" />
+    <None Include="Resources\Untitled-11.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
